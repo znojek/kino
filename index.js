@@ -36,9 +36,9 @@ class MainPage extends React.Component {
         }));
     };
 
-    rezerwacja = key => {
+ rezerwacja = key => {
         this.setState(prevState => ({
-            todos: prevState.todos.map(todo => {
+            todos: prevState.todos.filter(todo => {
                 if (todo.key !== key) {
                     return todo;
                 }
